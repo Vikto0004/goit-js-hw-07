@@ -7,7 +7,7 @@ const formSubmission = (event) => {
   const email = event.target.elements.email.value;
   const password = event.target.elements.password.value;
 
-  if (email === "" && password === "") {
+  if (email === "" || password === "") {
     alert("All form fields must be filled in");
   } else {
     objInfo.email = email;

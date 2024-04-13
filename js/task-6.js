@@ -15,10 +15,7 @@ function createBoxes(amount) {
     if (boxes.children.length > 0) {
       startWidth = 30;
       startHeight = 30;
-
-      for (const element of boxes.children) {
-        element.remove();
-      }
+      boxes.innerHTML = "";
     }
     if (amount >= 1 && amount <= 100) {
       for (let i = 0; i < amount; i++) {

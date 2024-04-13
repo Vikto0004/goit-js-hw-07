@@ -13,11 +13,13 @@ const images = [
   },
 ];
 const gallery = document.querySelector(".gallery");
+
+const newElementImg = document.createElement("img");
+const elColection = [];
+
 for (const element of images) {
-  const newElementLi = document.createElement("li");
-  const newElementImg = document.createElement("img");
-  gallery.appendChild(newElementLi);
-  newElementLi.appendChild(newElementImg);
-  newElementImg.setAttribute("src", element.url);
-  newElementImg.setAttribute("alt", element.alt);
+  newElementImg.setAttribute("src", element.url, "alt", element.alt);
+  elColection.push(`<li>${newElementImg.outerHTML}</li>`);
 }
+
+gallery.insertAdjacentHTML("beforeend", elColection.join(""));
