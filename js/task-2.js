@@ -18,7 +18,9 @@ const newElementImg = document.createElement("img");
 const elColection = [];
 
 for (const element of images) {
-  newElementImg.setAttribute("src", element.url, "alt", element.alt);
+  newElementImg.setAttribute("src", element.url);
+  newElementImg.setAttribute("alt", element.alt);
+
   elColection.push(`<li>${newElementImg.outerHTML}</li>`);
 }
 
